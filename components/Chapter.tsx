@@ -29,7 +29,7 @@ export default function Chapter({ index, data, id, className, children }: Props)
       {data.quote && <p className="quote">{data.quote}</p>}
       {data.link && (
         <p className="mono linkline">
-          {data.link.prefix} · <a href={data.link.href}>{data.link.label}</a>
+          {data.link.prefix}: <a href={data.link.href}>{data.link.label}</a>
         </p>
       )}
       {children}

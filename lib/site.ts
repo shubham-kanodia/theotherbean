@@ -8,7 +8,7 @@ export const site = {
     { label: "The year", href: "#year" },
     { label: "Shop", href: "#shop" },
   ],
-  footerLine: "The Other Bean · Robusta · Western Ghats · Washed, Cherry, Monsooned",
+  footerLine: "The Other Bean / Robusta / Western Ghats / Washed, Cherry, Monsooned",
   footerQuote: ["Every cherry carries two.", "Meet the other one."],
   /** Total season rainfall shown on the gauge, in inches. */
   gaugeTotal: 120,

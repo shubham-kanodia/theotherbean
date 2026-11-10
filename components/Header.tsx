@@ -4,7 +4,7 @@ import Wordmark from "./Wordmark";
 export default function Header() {
   return (
     <header className="header">
-      <a href="#year" className="header__brand" aria-label={`${site.name} — back to the top`}>
+      <a href="#year" className="header__brand" aria-label={`${site.name}, back to the top`}>
         <Wordmark />
       </a>
       <nav className="mono header__nav" aria-label="Primary">

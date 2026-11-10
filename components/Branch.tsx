@@ -6,7 +6,7 @@ export type BranchProps = {
   edge?: string;
   /** 1 = blossoms shown, cherries hidden. */
   bloom?: 0 | 1;
-  /** Cherry cluster scale, .5 – 1.2 */
+  /** Cherry cluster scale, .5 to 1.2 */
   size?: number;
   className?: string;
   style?: CSSProperties;

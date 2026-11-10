@@ -3,7 +3,7 @@ import { join } from "node:path";
 import { ImageResponse } from "next/og";
 import { site } from "@/lib/site";
 
-export const alt = `${site.name} — ${site.tagline}`;
+export const alt = `${site.name} | ${site.tagline}`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -44,8 +44,8 @@ export default async function Image() {
           <div style={{ marginTop: 36, fontSize: 34, opacity: 0.8 }}>Roughly 70% of the coffee India grows is robusta.</div>
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", fontSize: 20, opacity: 0.6, letterSpacing: "0.1em" }}>
-          <span>ROBUSTA · WESTERN GHATS</span>
-          <span>WASHED · CHERRY · MONSOONED</span>
+          <span>ROBUSTA / WESTERN GHATS</span>
+          <span>WASHED / CHERRY / MONSOONED</span>
         </div>
       </div>
     ),

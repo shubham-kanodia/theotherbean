@@ -14,7 +14,7 @@ export default function Shop() {
           </div>
           <p className="product__blurb">{p.blurb}</p>
           <div className="product__row">
-            <span className="mono product__price">{p.price} · {p.weight}</span>
+            <span className="mono product__price">{p.price} / {p.weight}</span>
             <button type="button" className="btn" aria-label={`Add ${p.name} to cart`}>Add to cart</button>
           </div>
         </article>

@@ -1,6 +1,6 @@
 # The Other Bean
 
-One-scroll site for The Other Bean — Indian robusta from the Western Ghats, told as a year of rain.
+One-scroll site for The Other Bean: Indian robusta from the Western Ghats, told as a year of rain.
 Built with Next.js (App Router, TypeScript, no CSS framework). Live at https://theotherbean.in.
 
 ## Run locally
@@ -14,14 +14,14 @@ npm run lint
 
 ## Where things live
 
-- `lib/chapters.ts` — the eight chapters: copy, palette, rain, and what the stage shows (branch / beans).
-- `lib/products.ts` — the three coffees. **Set `price` here** (currently the `[YOUR PRICE]` placeholder).
-- `lib/site.ts` — brand name, domain, nav, footer line, gauge total.
-- `components/Branch.tsx` — the branch, drawn once; recoloured per chapter via props.
-- `components/Stage.tsx` — hero pose (large, rotated, bleeding off the edge, with a faint depth layer) vs. standard pose.
-- `components/YearScroll.tsx` — scroll engine: active chapter, progress, parallax variables.
-- `app/globals.css` — all styling, including the 760px mobile breakpoint and reduced-motion rules.
-- `app/icon.svg` — favicon (cherry cluster). `app/opengraph-image.tsx` — social preview image.
+- `lib/chapters.ts`: the eight chapters: copy, palette, rain, and what the stage shows (branch / beans).
+- `lib/products.ts`: the three coffees. **Set `price` here** (currently the `[YOUR PRICE]` placeholder).
+- `lib/site.ts`: brand name, domain, nav, footer line, gauge total.
+- `components/Branch.tsx`: the branch, drawn once; recoloured per chapter via props.
+- `components/Stage.tsx`: hero pose (large, rotated, bleeding off the edge, with a faint depth layer) vs. standard pose.
+- `components/YearScroll.tsx`: scroll engine: active chapter, progress, parallax variables.
+- `app/globals.css`: all styling, including the 760px mobile breakpoint and reduced-motion rules.
+- `app/icon.svg`: favicon (cherry cluster). `app/opengraph-image.tsx`: social preview image.
 
 The "Add to cart" buttons are intentionally inert for now; wire them to a checkout when ready.
 
