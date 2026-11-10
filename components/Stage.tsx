@@ -23,7 +23,7 @@ function poses(W: number, H: number) {
     : { x: 0.72 * W, y: 0.76 * H, r: -40, s: Math.max(1.2, Math.min((2.2 * W) / 1440, (2.2 * H) / 820)) };
   const depth: Pose = mobile
     ? { x: 0.3 * W, y: 0.9 * H, r: -22, s: 0.7 }
-    : { x: 0.52 * W, y: 0.3 * H, r: -22, s: Math.max(0.9, Math.min((1.5 * W) / 1440, (1.5 * H) / 820)) };
+    : { x: 0.6 * W, y: 0.3 * H, r: -22, s: Math.max(0.9, Math.min((1.5 * W) / 1440, (1.5 * H) / 820)) };
   return { standard, hero, depth, mobile };
 }
 
@@ -50,7 +50,7 @@ export default function Stage({ ch }: { ch: number }) {
     <div className="stage-par" aria-hidden="true">
       <div
         className="stage-layer stage-depth"
-        style={{ ...box, transform: tf(depth), opacity: isHero && !mobile ? 0.32 : 0 }}
+        style={{ ...box, transform: tf(depth), opacity: isHero && !mobile ? 0.26 : 0 }}
       >
         <Branch cherry={s.cherry} edge={s.edge} bloom={1} size={0.55} />
       </div>
