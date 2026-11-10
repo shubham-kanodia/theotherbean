@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# The Other Bean
 
-## Getting Started
+One-scroll site for The Other Bean — Indian robusta from the Western Ghats, told as a year of rain.
+Built with Next.js (App Router, TypeScript, no CSS framework). Live at https://theotherbean.in.
 
-First, run the development server:
+## Run locally
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # production build
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Where things live
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `lib/chapters.ts` — the eight chapters: copy, palette, rain, and what the stage shows (branch / beans).
+- `lib/products.ts` — the three coffees. **Set `price` here** (currently the `[YOUR PRICE]` placeholder).
+- `lib/site.ts` — brand name, domain, nav, footer line, gauge total.
+- `components/Branch.tsx` — the branch, drawn once; recoloured per chapter via props.
+- `components/Stage.tsx` — hero pose (large, rotated, bleeding off the edge, with a faint depth layer) vs. standard pose.
+- `components/YearScroll.tsx` — scroll engine: active chapter, progress, parallax variables.
+- `app/globals.css` — all styling, including the 760px mobile breakpoint and reduced-motion rules.
+- `app/icon.svg` — favicon (cherry cluster). `app/opengraph-image.tsx` — social preview image.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The "Add to cart" buttons are intentionally inert for now; wire them to a checkout when ready.
 
-## Learn More
+## Deploy to Vercel
 
-To learn more about Next.js, take a look at the following resources:
+1. Push this repo to GitHub (or GitLab/Bitbucket).
+2. In Vercel, **Add New → Project → Import** the repo. Framework is auto-detected as Next.js; no settings needed.
+3. Alternatively from the terminal: `npx vercel login` then `npx vercel --prod`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Custom domain (theotherbean.in)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Vercel → Project → **Settings → Domains** → add `theotherbean.in` and `www.theotherbean.in` (redirect www → apex).
+2. At your registrar, add the records Vercel shows. Typically:
+   - `A` record for `@` → `76.76.21.21`
+   - `CNAME` record for `www` → `cname.vercel-dns.com`
+3. Wait for DNS to propagate; Vercel issues the TLS certificate automatically.
