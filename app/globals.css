@@ -196,9 +196,9 @@ button { font: inherit; color: inherit; }
   .quote { font-size: 24px; }
   .ch--shop { min-height: 0; padding-top: 140px; padding-bottom: 120px; }
   .shop { grid-template-columns: 1fr; }
-  .header { padding: 18px 20px; }
-  .header__nav { gap: 18px; padding-right: 36px; }
-  .lockup { font-size: 18px; }
+  .header { padding: 16px 20px; gap: 12px; }
+  .header__nav { gap: 16px; padding-right: 0; font-size: 11px; letter-spacing: .12em; white-space: nowrap; flex-shrink: 0; }
+  .lockup { font-size: 18px; gap: .28em; }
   .ch { padding-right: 72px; }
   .gauge { right: 12px; top: auto; bottom: 28px; transform: none; gap: 8px; }
   .gauge__tube { height: 180px; width: 10px; border-radius: 6px; }
